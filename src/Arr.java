@@ -7,22 +7,18 @@ public class Arr {
         Scanner sc = new Scanner(System.in);
         int arraysize = sc.nextInt();
         int counter;
-        int arr[] = new int[arraysize];
+        int[] arr = new int[arraysize];
         for (counter = 0; counter < arr.length; counter++) {
             arr[counter] = (int) (Math.random() * arraysize);
 
         }
         System.out.println(Arrays.toString(arr));
-        for (int i = 0; i < arr.length; i++) {
-
-
-        }
         System.out.println("Enter a number to search");
-        int searchnum = sc.nextInt();
-        long regstarttime = System.nanoTime()-start;
+        int searchNum = sc.nextInt();
+        long regStartTime = System.nanoTime()-start;
         System.out.println("Regular Search");
         for (counter = 0; counter < arraysize; counter++) {
-            if (arr[counter] == searchnum) {
+            if (arr[counter] == searchNum) {
                 System.out.println("True");
                 break;
             }
@@ -31,13 +27,13 @@ public class Arr {
             System.out.println("False");
 
         }
-        long regendtime = System.nanoTime()-regstarttime;
+        long regendtime = System.nanoTime()-regStartTime;
 
 //Binary Search
         System.out.println("Binary search");
         long binstarttime = System.nanoTime()-(System.nanoTime()-regendtime);
         Arrays.sort(arr);
-        int r = Arrays.binarySearch(arr, searchnum);
+        int r = Arrays.binarySearch(arr, searchNum);
         if (r >= 0) {
             System.out.println("True");
 
