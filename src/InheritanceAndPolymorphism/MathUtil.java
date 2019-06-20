@@ -3,7 +3,7 @@ package InheritanceAndPolymorphism;
 public class MathUtil {
 
     protected int[] arr;
-    protected double arrDouble;
+    protected double[] arrDouble;
     protected int integer;
 
     protected MathUtil(int[] arr) {
@@ -11,8 +11,11 @@ public class MathUtil {
 
     }
 
-    protected MathUtil(int[] arr, int integer) {
+    protected MathUtil(int[] arr, int number) {
 
+    }
+    protected  MathUtil(double[] arrDouble){
+        this.arrDouble= arrDouble;
     }
 
     public int[] getArr() {
@@ -23,13 +26,13 @@ public class MathUtil {
         this.arr = arr;
     }
 
-    public double getArrDouble() {
-        return arrDouble;
-    }
+  //  public double getArrDouble() {
+   //     return arrDouble;
+  //  }
 
-    public void setArrDouble(double arrDouble) {
-        this.arrDouble = arrDouble;
-    }
+   // public void setArrDouble(double arrDouble) {
+       // this.arrDouble = arrDouble;
+   // }
 
     public int getInteger() {
         return integer;
