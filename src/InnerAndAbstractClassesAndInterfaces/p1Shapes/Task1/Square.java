@@ -14,38 +14,46 @@ public class Square extends Rectangle {
         this.color = color;
         this.filled = filled;
     }
-    public double getWidth(){
+
+    public double getWidth() {
         return width;
     }
-    public void setWidth(double side){
+
+    public void setWidth(double side) {
         super.width = side;
     }
-    public  double getLength(){
+
+    public double getLength() {
         return length;
     }
-    public void setLength(double side){
-        super.length=  side;
+
+    public void setLength(double side) {
+        super.length = side;
     }
-    public String getColor(){
+
+    public String getColor() {
         return color;
     }
-    public void setColor(){
+
+    public void setColor() {
         this.color = color;
     }
-    public  void  setFilled(){
+
+    public void setFilled() {
         this.filled = filled;
     }
-    public boolean getFilled(){
+
+    public boolean getFilled() {
         return filled;
     }
 
     @Override
-    public double getPerimeter(){
+    public double getPerimeter() {
         return super.getPerimeter();
     }
 
     @Override
-    public  String toString(){
-        return "A square with side ="+length +" wich is a superclass of "+super.getClass().getSimpleName();
+    public String toString() {
+        return "A square with side =" + length + " wich is a superclass of " + super.getClass().getSimpleName();
     }
 }
