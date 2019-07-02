@@ -3,7 +3,7 @@ package Collections.Task3;
 import java.util.Iterator;
 
 public class Demo {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         CustomLinkedList testList = new CustomLinkedList();
         //add some elements
         testList.add(24);
@@ -13,10 +13,10 @@ public class Demo {
         testList.delete(11);
         //reverse elements
         testList.begin = testList.reverse(testList.begin);
-        Iterator <Integer> iterator = testList.iterator();
-        while (iterator.hasNext()){
+        Iterator<Integer> iterator = testList.iterator();
+        while (iterator.hasNext()) {
             int element = iterator.next();
-            System.out.println("Here is a current element "+element);
+            System.out.println("Here is a current element " + element);
         }
     }
 }

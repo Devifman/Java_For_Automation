@@ -1,11 +1,12 @@
-package Exeptions.Task5;
+package Exceptions.Task5;
 
 public class C extends B {
-    public C(String text){
+    public C(String text) {
         super(text);
     }
+
     @Override
-    public String getText(){
+    public String getText() {
         return super.getText();
     }
 }

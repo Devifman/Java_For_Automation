@@ -1,7 +1,7 @@
-package Exeptions.Task4;
+package Exceptions.Task4;
 
 public class Second extends Exception {
-    public Second(String text){
+    public Second(String text) {
         super(text);
     }
 }
