@@ -3,22 +3,38 @@ package Collections.Task2;
 import java.util.*;
 
 public class Person implements Comparable<Person> {
-    private String name;
-    private int age;
+    public String name;
+    public int age;
 
     Person() {
         name = "David";
-        age = 25;
+        age = 22;
     }
 
-    Person(String name, int age) {
+    public Person(String name, int age) {
         this.name = name;
         this.age = age;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
     @Override
-    public int compareTo(Person comparedW) {
-        return name.compareTo(comparedW.name);
+    public int compareTo(Person person) {
+        return name.compareTo(person.getName());
     }
 
     @Override
@@ -26,14 +42,14 @@ public class Person implements Comparable<Person> {
         return "Name of the person is " + name + " and age of that person is " + age;
     }
 
-    boolean Equals(Object comparedW) {
-        if (comparedW == this) {
+    boolean Equals(Object someobj) {
+        if (someobj == this) {
             return true;
         }
-        if (!(comparedW instanceof Person)) {
+        if (!(someobj instanceof Person)) {
             return false;
         }
-        Person man = (Person) comparedW;
+        Person man = (Person) someobj;
         return age == man.age && Objects.equals(name, man.name);
     }
 
@@ -44,28 +60,20 @@ public class Person implements Comparable<Person> {
 
     public static class NameSort implements Comparator<Person> {
         @Override
-        public int compare(Person com, Person comparedW) {
-            return com.name.compareTo(comparedW.name);
+        public int compare(Person com, Person com2) {
+            return com.name.compareTo(com2.name);
         }
 
     }
 
     public static class AgeSort implements Comparator<Person> {
         @Override
-        public int compare(Person com, Person comparedW) {
-            if (com.age < comparedW.age) {
-                return -1;
-            } else {
-                if (com.age > comparedW.age) {
-                    return 1;
-                } else {
-                    return 0;
-                }
-            }
+        public int compare(Person com, Person com2) {
+            return com.age - com2.age;
         }
     }
 
-    private static boolean personExists(ArrayList<Person> comparedW, Person person) {
+    public static boolean personExists(ArrayList<Person> comparedW, Person person) {
         boolean exists = false;
         for (Person x : comparedW) {
             exists = true;
